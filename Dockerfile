@@ -22,7 +22,7 @@ ENV RUSTUP_HOME=/usr/local/rustup \
 RUN curl https://sh.rustup.rs -sSf | \
     sh -s -- -y --no-modify-path --default-toolchain none
 
-ENV PORTABLE=ON CARGO_TARGET_DIR=/tmp/target
+ENV PORTABLE=ON CARGO_TARGET_DIR=/tmp/target NEAR_RELEASE_BUILD=release
 RUN cargo build -p neard --release
 
 
